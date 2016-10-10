@@ -1,0 +1,19 @@
+<ion-view title="Domicile">
+    <ion-content padding="'false'" class="has-header">
+        <form class="list">
+            <img src="img/header.png" width="100%" height="auto" style="width: 100%; height: auto;">
+            <div class="spacer" style="width: 320px; height: 14px;"></div>
+            <h3>{{nombrere}}</h3>
+            <img src="{{imgView}}" width="100%" height="auto" style="width: 100%; height: auto;">
+            <a menu-close="" href="" class="button button-balanced button-block button-small icon-left ion-android-restaurant" ng-click="show1 = true; show2 = false">Platos</a>
+            <div ng-show="show1" ng-hide="show2">
+                <ion-checkbox ng-repeat="item in listPlatos">{{item}}</ion-checkbox>
+            </div>
+            <a menu-close="" href="" class="button button-balanced button-block button-small icon-left ion-android-restaurant" ng-click="show2 = true; show1 = false">Vinos</a>
+            <div ng-show="show2" ng-hide="show1">
+                <ion-checkbox ng-repeat="item in listVinos">{{item}}</ion-checkbox>
+            </div>
+        </form>
+        <a href="#/page3" ng-click="showAlert()" class="button button-balanced button-block  icon-left ion-android-restaurant">Pedir</a>
+    </ion-content>
+</ion-view>
